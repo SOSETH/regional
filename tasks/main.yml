@@ -10,7 +10,7 @@
 
   - name: generate locales
     become: True
-    locale_gen:
+    community.general.locale_gen:
       name: "{{ item }}"
       state: present
     with_items: "{{ regional_locales_installed }}"
